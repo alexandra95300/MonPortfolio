@@ -57,7 +57,7 @@ label, #toggle
     {
         width: 30px;
         display: flex;
-        justify-content: center;
+        justify-content:flex-end;
         align-items: center;
         margin: 0 auto;
         font-size: 40px;
