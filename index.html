@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>MonPortfolio</title>
-</head>
-<body>
-    <header>
-        <h1>Mon Portfolio</h1>
-        <nav>
-            <label for="toggle">☰</label>
-            <input type="checkbox" id="toggle">
-         <div class="main_pages">
-            <a href="#">Mes Projets</a>
-            <a href="#">Formation</a>
-            <a href="#">Contact</a>
-         </div>
-        </nav>
-    </header>
-    <div>
-        <h2>Développeur web et web mobile</h2>
-    </div>
-    <div>
-        <h2>Présentation</h2>
-        <img src="" alt="">
-        <p>Salvador</p>
-        <p>Alexandra</p>
-        <p>34 ans</p>
-        <p>apintosalvador19@gmail.com</p>
-        <p>06.68.16.68.68</p>
-    </div>
-    <div>
-        <h2></h2>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>MonPortfolio</title>
+
+    </head>
+    <body>
+        <header>
+            <h1>Mon Portfolio</h1>
+            <nav>
+                <label for="toggle">☰</label>
+                <input type="checkbox" id="toggle">
+            <div class="main_pages">
+                <a href="#projets">Mes Projets</a>
+                <a href="#training">Formation</a>
+                <a href="#contact">Contact</a>
+            </div>
+            </nav>
+        </header>
+        <div class="title">
+            <p class="name">Salvador Alexandra</p>
+            <h2>Développeuse</h2>
+        </div>
+        <div class="container">
+            <div class="container-presentation">
+                <h3>Présentation</h3>
+                <div>
+                    <img class="face" src="chat.webp" alt="">
+                </div>
+                <div>
+                    <p>34 ans</p>
+                    <p>apintosalvador19@gmail.com</p>
+                    <p>06.68.16.68.68</p>
+                </div>
+            </div>
+            <div class="container-project">
+                <div id="projets" class="projets">
+                    <h3>Mes projets</h3>
+                    <img src="chat.webp" alt="chat" width="100%">
+                    <p class="titres-projects">Projet 1</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus,
+                    nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
+                    <a href="" class="button">En savoir plus</a>
+                </div>
+                <div class="projets">
+                    <img src="chanteuse.jpg" alt="chanteuse" width="100%">
+                    <p class="titres-projects">Projet 2</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus,
+                    nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
+                    <a href="" class="button">En savoir plus</a>
+                </div>
+            </div>
+            <div class="container-training">
+                <h3 id="training">Formations</h3>
+                <div class="training">
+                    <img src="training.jpg" alt=" ecran digital">
+                    <p class="date">septembre 2022</p>
+                    <p>Développeur web et web mobile</p>
+                    <p>Ecole Studi en ligne</p>
+                </div>
+                <div class="training">
+                    <p class="date">Février 2024</p>
+                    <p>Développeur web et web mobile</p>
+                    <p>Ecole DonKeyschool à Paris</p>
+                </div> 
+            </div>
+            <div class="contact">
+                <h3 id="contact" class="title-contact">Contact</h3>
+                <form>
+                    <p>
+                        <label for="name">Nom</label>
+                        <input type="text" id="name"  />
+                    </p>
+                    <p>
+                        <label for="mail">E-mail</label>
+                        <input type="email" id="mail"/>
+                    </p>
+                    <p>
+                        <label for="msg">Message</label>
+                        <textarea id="msg"></textarea>
+                        <button class="button-form"><a href="apintosalvador19@gmail.com">Envoyer</a></button>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>MonPortfolio.com</p>
+        </footer>
+    </body>
 </html>
