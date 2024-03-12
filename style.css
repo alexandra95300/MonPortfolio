@@ -1,3 +1,15 @@
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+
+}
+/*.sticky + header {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }*/
 body{
     margin: auto;
     background-image: linear-gradient(339deg, rgba(47, 47, 47,0.02) 0%, rgba(47, 47, 47,0.02) 42%,transparent 42%, transparent 99%,rgba(17, 17, 17,0.02) 99%, rgba(17, 17, 17,0.02) 100%),
@@ -30,7 +42,7 @@ h3{
     justify-content: center;
 }
 p{
-    font-size: 20px;
+    font-size: 24px;
     display: flex;
     justify-content: center;
 }
@@ -41,11 +53,12 @@ p{
 a.button{
     padding: 0.5em;
     background-color: rgb(100, 158, 208);
-    font-style: bold;
-    margin: 1em;
+    font-style: oblique;
+    margin: 2em;
     border-radius: 10px;
     color:white;
     text-decoration: none;
+    width: 100px;
 }
 a.button:hover{
     background-color: rgb(41, 91, 135);
@@ -82,7 +95,7 @@ nav .main_pages a
  
 nav a:hover 
 {
-    background: #5A5766
+    background: #83818c
 }
 label, #toggle
 {
@@ -100,7 +113,6 @@ label, #toggle
     51%,rgba(181, 181, 181,0.05) 51%, rgba(181, 181, 181,0.05) 100%),linear-gradient(92deg, hsl(214,0%,11%),hsl(214,0%,11%));
     text-align: center;
     font-size: x-large;
-    width: 60%;
     margin: 0 auto;
     padding: 3.5em;
 }
@@ -109,12 +121,16 @@ label, #toggle
     font-size: 60px;
     font-weight: bolder;
 }
-img{
-    width: 30%;
+.img-training{
+    width: 60%;
+    margin-bottom: 30px;
+}
+.img-projets{
+    width: 50%;
 }
 .face{
     border-radius: 200px;
-    border: #48435C;
+    width: 50%;
 }
 .projets{
     display: flex;
@@ -129,10 +145,13 @@ img{
     flex-direction: column;
     align-items: center;
 }
+
 .training{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 .date{
     font-weight: 900;
@@ -157,6 +176,20 @@ img{
 .title-contact{
     color: white;
 }
+.label-form label{
+    display: flex;
+    font-size: 50px;
+    width: 100px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+    font-size: 19px;
+}
+.button-form{
+    background-color:rgb(100, 158, 208);
+    color: white;
+}
 footer{
     background-color:  #48435C;
     color: white;
@@ -167,9 +200,11 @@ footer{
  
 @media all and (max-width: 991px)
 {
-
+    body{
+        padding: 0px;
+    }
     .title{
-        width: 100%;
+        width: 90%;
         padding: 0.5em;
 
     }
@@ -200,8 +235,24 @@ footer{
         color: white;
         cursor: pointer;
     }
+    .label-form
+    {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+     
+    }
+    .label-form label{
+        width: 10px;
+        width: 50px;
+        font-size: 17px;
+    }
     #toggle:checked + .main_pages {
         display: flex;
+    }
+    footer{
+        width: 90%;
     }
 }
 
