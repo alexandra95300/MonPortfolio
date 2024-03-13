@@ -1,15 +1,6 @@
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-
+*{
+    list-style: none;
 }
-/*.sticky + header {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }*/
 body{
     margin: auto;
     background-image: linear-gradient(339deg, rgba(47, 47, 47,0.02) 0%, rgba(47, 47, 47,0.02) 42%,transparent 42%, transparent 99%,rgba(17, 17, 17,0.02) 99%, rgba(17, 17, 17,0.02) 100%),
@@ -17,10 +8,21 @@ body{
     rgba(5, 5, 5,0.02) 1%,transparent 1%, transparent 45%,rgba(19, 19, 19,0.02) 45%, rgba(19, 19, 19,0.02) 100%),linear-gradient(29deg, rgba(28, 28, 28,0.02) 0%, rgba(28, 28, 28,0.02) 33%, 
     transparent 33%, transparent 40%,rgba(220, 220, 220,0.02) 40%, rgba(220, 220, 220,0.02) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255)); 
 }
-h1{
+
+header{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-image: repeating-linear-gradient(293deg, hsla(29,0%,74%,0.12) 0px,transparent 7px,hsla(29,0%,74%,0.12) 12px,transparent 19px,
+    hsla(29,0%,74%,0.12) 24px,transparent 31px,hsla(29,0%,74%,0.12) 36px),repeating-linear-gradient(43deg, hsla(29,0%,74%,0.12) 0px,transparent 7px,hsla(29,0%,74%,0.12) 12px,transparent 19px,hsla(29,0%,74%,0.12) 24px,transparent 31px,hsla(29,0%,74%,0.12) 36px),repeating-linear-gradient(0deg, hsla(29,0%,74%,0.12) 0px,transparent 7px,hsla(29,0%,74%,0.12) 12px,transparent 19px,
+    hsla(29,0%,74%,0.12) 24px,transparent 31px,hsla(29,0%,74%,0.12) 36px),linear-gradient(90deg, rgb(253,253,253),rgb(253,253,253));
+}
+
+h1{
     text-decoration: double;
 }
 h2{
@@ -28,9 +30,6 @@ h2{
     text-transform: capitalize;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(245, 245, 245);
-
-
 }
 h3{
     font-size: xx-large;
@@ -43,12 +42,24 @@ h3{
 }
 p{
     font-size: 24px;
-    display: flex;
-    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
 }
+
+.color-white{
+    color: rgb(245, 245, 245);
+}
+
+.d-flex{
+    display: flex;
+}
+
 .container{
     padding: 1em;
     
+}
+.logo{
+    width: 40%;
+    margin: 13px;
 }
 a.button{
     padding: 0.5em;
@@ -89,7 +100,6 @@ nav .main_pages a
     justify-content: center;
     height: 100px;
     text-decoration: none;
-    font-family: Arial, sans-serif;
     color: white;
 }
  
@@ -101,7 +111,13 @@ label, #toggle
 {
     display: none;
 }
-
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+  
 .title{
     background-image: linear-gradient(216deg, rgba(77, 77, 77,0.05) 0%, rgba(77, 77, 77,0.05) 25%,rgba(42, 42, 42,0.05) 
     25%, rgba(42, 42, 42,0.05) 38%,rgba(223, 223, 223,0.05) 38%, rgba(223, 223, 223,0.05) 75%,rgba(36, 36, 36,0.05) 75%,
@@ -121,15 +137,28 @@ label, #toggle
     font-size: 60px;
     font-weight: bolder;
 }
-.img-training{
-    width: 60%;
-    margin-bottom: 30px;
+.container-presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.img-projets{
-    width: 50%;
+.text-presentation{
+    font-size: larger;
+}
+.container-face{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 .face{
     border-radius: 200px;
+    width: 34%;
+}
+
+.img-projets{
     width: 50%;
 }
 .projets{
@@ -139,13 +168,13 @@ label, #toggle
     flex-wrap: nowrap;
     flex-direction: column;
 }
-
-.container-presentation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.title-projet{
+    font-weight: bold;
 }
-
+.img-training{
+    width: 60%;
+    margin-bottom: 30px;
+}
 .training{
     display: flex;
     flex-direction: column;
@@ -178,24 +207,37 @@ label, #toggle
 }
 .label-form label{
     display: flex;
-    font-size: 50px;
-    width: 100px;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-start;
     color: white;
-    font-size: 19px;
 }
 .button-form{
-    background-color:rgb(100, 158, 208);
+    background-color: rgb(100, 158, 208);
     color: white;
+    width: 240%;
+    border-radius: 8px;
+    padding: 13px;
+}
+.input-name{
+    font-size: 30px;
+    
+}
+.input-mail{
+    font-size: 30px;
+}
+.input-msg{
+    font-size: 32px;
+    margin-left: 0px;
 }
 footer{
-    background-color:  #48435C;
+    background-color: #48435C;
     color: white;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
-
 
  
 @media all and (max-width: 991px)
@@ -203,11 +245,10 @@ footer{
     body{
         padding: 0px;
     }
-    .title{
-        width: 90%;
-        padding: 0.5em;
-
+    .bebas-neue-regular {
+        font-size: 1.5em;
     }
+
     nav
     {
         height: 60px;
@@ -224,6 +265,15 @@ footer{
     nav .main_pages a {
         width: 100%;
     }
+
+    .title{
+        width: 90%;
+        padding: 0.5em;
+    }
+
+    #toggle:checked + .main_pages {
+        display: flex;
+    }
  
     label
     {
@@ -233,7 +283,6 @@ footer{
         margin: 0px 10px;
         font-size: 40px;
         color: white;
-        cursor: pointer;
     }
     .label-form
     {
@@ -248,9 +297,35 @@ footer{
         width: 50px;
         font-size: 17px;
     }
-    #toggle:checked + .main_pages {
-        display: flex;
+    
+    .button-form{
+        width: 165%;
     }
+    .input-name{
+        font-size: 17px;
+        margin-left: 0px;
+    }
+    .input-mail{
+        font-size: 17px;
+        margin-left: 0px;
+    }
+    .input-msg{
+        font-size: 24px;
+        margin-left: -2px;
+        width: 214px;
+    }
+    .container-face{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .face{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
     footer{
         width: 90%;
     }
