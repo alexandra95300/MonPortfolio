@@ -14,7 +14,7 @@
     <body>
         <header>
             <img class="logo" src="logo-transparent-png.png" alt="logo mon Portfolio" width="30%">
-            <nav class="bebas-neue-regular">
+            <nav class="bebas-neue-regular background-violet">
                 <label for="toggle">☰</label>
                 <input type="checkbox" id="toggle">
                 <div class="main_pages">
@@ -25,43 +25,55 @@
                 </div>
             </nav>
         </header>
-        <div class="title">
+        <div id="accueil" class="title background-grey text-center">
             <h1 class="color-white">
-                <div id="accueil">Salvador Alexandra</div>
+                <div>Salvador Alexandra</div>
                 <div>Développeuse</div>
             </h1>
         </div>
         <div class="container">
             <div class="container-presentation">
-                <h3>Présentation</h3>
+                <h2>Présentation</h2>
                 <div class="container-face">
-                        <img class="face" src="moi.JPG" alt="image de mon visage">
-                    <ul class="text-presentation">
-                        <li>34 ans</li>
-                        <li>apintosalvador19@gmail.com</li>
-                        <li>06.68.16.68.68</li>
-                    </ul>
+                    <img class="face box-shadow" src="moi.JPG" alt="image de mon visage" width="260px" height="260px">
+                    <div class="text-presentation box-shadow background-violet color-white">
+                        <div><i class="fa-solid fa-user m-1"></i>34 ans</div>
+                        <div><i class="fa-solid fa-envelope m-1"></i>apintosalvador19@gmail.com</div>
+                        <div><i class="fa-solid fa-phone m-1"></i>06.68.16.68.68</div>
+                    </div>
                 </div>
             </div>
             <div class="container-project">
-                <div class="projets">
-                    <h3 id="projets">Mes projets</h3>
-                    <img class="img-projets" src="chat.webp" alt="chat entouré d'un coeur rouge">
-                    <p class="title-project">Projet 1</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus,
-                    nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
-                    <a href="" class="button">En savoir plus</a>
-                </div>
-                <div class="projets">
-                    <img class="img-projets" src="chanteuse.jpg" alt="femme chanteuse avec un micro">
-                    <p class="title-project">Projet 2</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus,
-                    nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
-                    <a href="" class="button" >En savoir plus</a>
-                </div>
+				<h2 id="projets">Mes projets</h2>
+            	<section class="projets d-flex text-center color-white">
+            		<div class="item background-grey box-shadow m-1">
+            			<img class="img-projets" src="chat-cinema.jpg" alt="chat roux habillé de vert">
+	                    <h3 class="color-white">Projet 1</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus,
+	                    nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat
+	                	<a href="" class="button color-white m-1 p-1">En savoir plus</a>
+	             	</p>
+            		</div>
+            		<div class="item background-grey box-shadow m-1">
+            			<img class="img-projets" src="chat-cinema.jpg" alt="chat roux habillé de vert">
+	                    <h3 class="color-white">Projet 2</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus,
+	                    nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat
+				            <a href="" class="button color-white m-1 p-1">En savoir plus</a>
+				        </p>
+            		</div>
+            		<div class="item background-grey box-shadow m-1">
+            			<img class="img-projets" src="chat-cinema.jpg" alt="chat roux habillé de vert">
+	                     <h3 class="color-white">Projet 3</h3>
+	                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus,
+	                    nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat
+						<a href="" class="button color-white m-1 p-1">En savoir plus</a>
+	                	</p>
+            		</div>
+            	</section>
             </div>
             <div class="container-training">
-                <h3 id="title-training">Formations</h3>
+                <h2 id="title-training">Formations</h2>
                 <div class="training">
                     <img class="img-training" src="training.jpg" alt="image avec des reflets">
                     <p class="date">Septembre 2022</p>
@@ -74,8 +86,8 @@
                     <p>Ecole DonKeyschool à Paris</p>
                 </div> 
             </div>
-            <div class="container-contact">
-                <h3 id="contact" class="title-contact">Contact</h3>
+            <div class="container-contact background-grey">
+                <h3 id="contact" class="color-white">Contact</h3>
                 <form class="label-form">
                     <p>
                         <label for="name">Nom</label>
@@ -99,5 +111,7 @@
             
             <p class="copyright">© 2024 MonPortfolio.com - Tous droits réservés.</p>
         </footer>
+        <script src="https://kit.fontawesome.com/ac1ff2f9bd.js" crossorigin="anonymous"></script>
+
     </body>
 </html>
